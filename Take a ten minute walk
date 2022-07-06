@@ -1,0 +1,28 @@
+function isValidWalk(walk) {
+    let nNum = 0 
+    let sNum = 0 
+    let eNum = 0 
+    let wNum = 0 
+    for(n in walk){
+      switch(walk[n]){
+          case "n":
+            nNum ++
+            break;
+          case "s":
+            sNum ++
+          case "e":
+            eNum ++
+          case "w":
+            wNum ++
+          }
+      }
+    if (sNum >1 && nNum >1 &&eNum >1 &&wNum >1){
+      if(walk.length === 10 && sNum === nNum && eNum === wNum){
+      return true} 
+      else 
+      {return false}
+    }else{
+      return false}
+    }
+
+console.log(isValidWalk(['w','w','e','w','w','e','w','e','e','e']));

@@ -1,0 +1,15 @@
+function digital_root(n) {
+  let string = n.toString().split("")
+  let count 
+  while (string.length > 1){
+    count = parseInt(string[0])
+    for(let i = 1; i < string.length ;i++){
+        count +=  parseInt(string[i])
+      }
+    string = count.toString().split("")
+  }
+  return count 
+}
+
+
+console.log(digital_root(453))

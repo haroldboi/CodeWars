@@ -1,0 +1,5 @@
+var isSquare = function(n){
+  let num = Math.sqrt(n)
+  return Number.isInteger(num)
+  }
+   

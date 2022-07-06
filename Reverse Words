@@ -1,0 +1,16 @@
+function reverseWords(str) {
+    let string = ""
+    let newWord = str.split(" ");
+    const lengthz =(newWord.length-1).toString()
+    for (n in newWord){
+        string += newWord[n].split("").reverse().join("")
+        n = n.toString()
+        if (n !== lengthz) {
+            string += " "
+        }
+    }
+    return string
+    
+    
+}
+console.log(reverseWords("Hello This Is a Program and Stuff."));

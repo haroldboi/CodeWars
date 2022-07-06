@@ -1,0 +1,25 @@
+function deleteNth(arr,n){
+    let arrayDup = []
+    let count = 0
+    for(let i = 0; i < arr.length;i++){
+        count = 0
+        if (!arrayDup.includes(arr[i])){
+            arrayDup.push(arr[i])
+        }else{
+            for(num in arrayDup){
+                if(arrayDup[num] === arr[i]){
+                    count ++
+                }
+            }
+        if(count < n ){
+            arrayDup.push(arr[i])
+        }
+        
+    }
+}
+    console.log(arrayDup.length)
+    return arrayDup
+    
+    
+}
+console.log(deleteNth([4, 50, 16, 50, 4, 50, 5, 5, 4, 29, 23, 50, 23, 4, 50, 50, 5, 23, 23, 50, 23, 4, 5, 29, 5, 5, 50, 5, 29, 5, 50, 50, 4, 5, 23, 23], 1))

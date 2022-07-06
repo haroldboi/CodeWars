@@ -1,0 +1,21 @@
+function X(str){
+    let xNum = 0;
+    let oNum = 0;
+    for (let l in str)  {
+        if (str.charAt(l) === "x" ||str.charAt(l) === "X"){
+          xNum++
+        } else if (str.charAt(l) === "o"||str.charAt(l) === "O"){
+          oNum ++
+        }
+      }
+    if (xNum === oNum || (xNum=== 0 && oNum === 0)){
+        return true
+    }else{
+        return false 
+    }
+}
+    
+
+        
+    
+X("oXxooxxo")

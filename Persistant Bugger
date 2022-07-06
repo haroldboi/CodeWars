@@ -1,0 +1,22 @@
+function persistence(num) {
+    let splitz = (num.toString()).split("")
+    if(splitz.length < 2 ){
+        return 0
+    }
+    let count = 0
+    function loopz(arr,c){
+        count ++
+        for (let n = 1; n < arr.length;n++){
+            c *= arr[n]
+        }
+        console.log(c)
+        let array = c.toString().split("")
+        if (array.length > 1){
+            loopz(array,array[0])
+        }
+        console.log(array);  
+    }
+    loopz(splitz,splitz[0])
+    return count
+}
+console.log(persistence(4));

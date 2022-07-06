@@ -1,0 +1,25 @@
+function sumDigPow(a = 1 , b = 1000) {
+    let out = []
+    for(let c= a; c <= b;c++){
+        let i =c 
+        i = i.toString()
+        if (i.length < 2){
+            out.push(c)
+        }else{
+            i = i.split("")
+        let num = i[0]
+        for(let each = 1;each < i.length ;each++){
+            num = parseInt(num)
+            num = num + Math.pow(i[each],each+1)
+        }
+        if (num === c){
+            out.push(num)
+        }
+    }
+}
+    return out
+}
+
+console.log(sumDigPow(8,100))
+console.log(sumDigPow())
+console.log(1+49+(Math.pow(5,3)))
