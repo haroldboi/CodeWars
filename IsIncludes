@@ -1,0 +1,17 @@
+function myIncludes(haystack, needle) {
+    let arr = needle.split("")
+    let newString = ""
+    for(each in arr){
+        if(newString.length === needle.length){break}else{
+            if(haystack.includes(arr[each])){
+                newString += arr[each]
+                haystack.replace(arr[each],"")}
+        }
+    }
+    if(newString.length === needle.length){
+        return true
+    }else{
+        return false
+        }
+    
+}
