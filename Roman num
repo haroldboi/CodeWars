@@ -1,0 +1,27 @@
+function solution(number){
+  let roman = {
+    '1000' :'M',
+    '500' :'D',
+    '100' :'C',
+    '50' :'L',
+    '1': 'I',
+    //'10' :'X',
+    //'50' :'L',
+    //'100' :'C',
+    //'500' :'D',
+    //'1000' :'M',
+  }
+let count = number
+let subArray = Object.entries(roman).reverse().map(function(letter){
+    //console.log(Math.floor(number/letter[0]))
+    let maxDiv = Math.floor(count/letter[0])
+    if (count > 0 && maxDiv > 0){
+        count -= (maxDiv*letter[0])
+        console.log(maxDiv)
+        return letter[1].repeat(maxDiv)
+    }
+    else{return""}
+})
+return subArray.join("")
+}
+solution(2550)

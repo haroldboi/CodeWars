@@ -1,0 +1,10 @@
+function wordKabob(word){
+    return word.split("").join("-")
+}
+
+console.log(wordKabob("YahMean"))
+
+
+let string = 'The quick brown fox jumps over the lazy dog. If the dog reacted, was it really lazy?'
+string = string.replaceAll("dog","new")
+console.log(string)

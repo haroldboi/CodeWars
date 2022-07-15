@@ -1,0 +1,24 @@
+function pigIt(str){
+    let punc = [".","!","?"]
+    let punStr = ""
+    if(str.includes("!")){
+        punStr += "!"
+        str = str.replace("!","")
+    }else if (str.includes("?")){
+        punStr += "?"
+        str = str.replace("?","")
+    }
+    str = str.split(" ")
+    console.log(str)
+    for(each in str){
+        if(str[each].length > 0){
+            str[each] += str[each][0] + "ay" 
+            str[each] = str[each].slice(1)}}
+    
+
+    return (str.join(" ") + punStr)
+      
+    }
+
+
+console.log(pigIt("O tempora o mores !"))

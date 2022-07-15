@@ -1,0 +1,13 @@
+function scramble(str1, str2){
+    const len = str2.length
+    let arr = str1.split("").filter((entry)=>{
+      if(str2.search(entry) !== -1){
+        str2 = str2.replace(entry,"") 
+        return entry
+        }})
+    
+    return((arr.length === len) ? true : false) 
+    
+   }
+
+console.log(scramble('cuywqetyjashjhasddsrea','coddewars'))

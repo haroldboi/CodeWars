@@ -1,0 +1,12 @@
+function isPangram(string){
+    const alphabet = 'abcdefghijklmnopqrstuvwxyz'
+    let count = 0
+  for(alph in alphabet){
+    if(!string.toLowerCase().includes(alphabet[alph])){
+        return false
+    }
+  }
+  return true  
+}
+
+console.log(isPangram('The quick brow fox jumps over the lazy dog.'))
